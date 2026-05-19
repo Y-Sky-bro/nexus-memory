@@ -137,7 +137,7 @@ def cmd_daemon():
     print(f"[{datetime.now().isoformat()[:19]}] Log: {MONITOR_LOG}")
     while True:
         cmd_check()
-        time.sleep(600)
+        time.sleep(1800)  # every 30 min (was 10 min — too aggressive for Windows)
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"

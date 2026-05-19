@@ -1,0 +1,58 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "name": "nexus-memory",
+  "description": "Zero-dependency persistent memory for AI agents — MCP + REST API + CLI",
+  "category": "Memory & Storage",
+  "maintainers": ["Y-Sky-bro"],
+  "environmentVariables": [],
+  "tools": [
+    {
+      "name": "search",
+      "description": "Search memories by keyword across all tiers",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search query" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "stats",
+      "description": "View memory system statistics (count per tier, token usage, decay status)"
+    },
+    {
+      "name": "save",
+      "description": "Save a memory to a specific tier",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": { "type": "string", "description": "Memory content in markdown" },
+          "tier": { "type": "string", "description": "Target tier", "enum": ["episodic", "semantic", "procedural", "reflections", "working", "core"] }
+        },
+        "required": ["content"]
+      }
+    },
+    {
+      "name": "touch",
+      "description": "Boost a memory's recency (reset its decay clock)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "description": "Memory file path (relative to memory dir)" }
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "decay",
+      "description": "Run Ebbinghaus decay on all memories (dry-run with --dry-run)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dry_run": { "type": "boolean", "description": "Preview without applying" }
+        }
+      }
+    }
+  ]
+}

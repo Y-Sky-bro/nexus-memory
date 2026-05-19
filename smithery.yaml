@@ -1,0 +1,19 @@
+# Smithery.ai configuration for Nexus Memory System
+# https://smithery.ai/docs/build/publish
+
+name: nexus-memory
+description: Zero-dependency persistent memory for AI agents with Ebbinghaus decay, keyword retrieval, MCP + REST API + CLI. Drop-in Hindsight replacement saves 92% on token costs.
+
+command:
+  - python
+  - nexus_mcp.py
+
+transport: stdio
+
+configSchema:
+  type: object
+  properties:
+    memoryDir:
+      type: string
+      description: Path to memory directory (defaults to ./memory)
+      default: ./memory

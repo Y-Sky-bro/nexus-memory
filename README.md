@@ -2,6 +2,10 @@
 
 **Zero-dependency, file-based persistent memory for AI agents.**
 
+[![Glama](https://img.shields.io/badge/Glama-Listing-blue)](https://glama.ai/mcp/servers/@Y-Sky-bro/nexus-memory)
+[![Smithery](https://img.shields.io/badge/Smithery-Available-green)](https://smithery.ai/server/nexus-memory)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Nexus is a tiered memory system with Ebbinghaus decay, keyword retrieval, token-efficient context assembly, and full MCP + REST API support. Drop-in replacement for Hindsight that saves **92% on memory token costs**.
 
 ```

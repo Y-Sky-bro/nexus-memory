@@ -1,0 +1,58 @@
+{
+  "serverInfo": {
+    "name": "nexus-memory",
+    "version": "2.0.0"
+  },
+  "capabilities": {
+    "tools": {
+      "search": {
+        "description": "Search memories by keyword across all tiers",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": { "type": "string", "description": "Search query" }
+          },
+          "required": ["query"]
+        }
+      },
+      "stats": {
+        "description": "View memory system statistics"
+      },
+      "save": {
+        "description": "Save a memory to a specific tier",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "content": { "type": "string", "description": "Memory content" },
+            "tier": {
+              "type": "string",
+              "enum": ["episodic", "semantic", "procedural", "reflections", "working", "core"],
+              "description": "Target memory tier"
+            }
+          },
+          "required": ["content"]
+        }
+      },
+      "touch": {
+        "description": "Boost a memory's recency",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": { "type": "string", "description": "Memory file path" }
+          },
+          "required": ["path"]
+        }
+      },
+      "decay": {
+        "description": "Run Ebbinghaus decay on all memories",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "dry_run": { "type": "boolean", "description": "Preview without applying" }
+          }
+        }
+      }
+    }
+  },
+  "authentication": { "required": false }
+}
