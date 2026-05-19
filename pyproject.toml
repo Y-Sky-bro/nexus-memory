@@ -17,8 +17,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/nexus-memory/nexus"
-"Documentation" = "https://github.com/nexus-memory/nexus#readme"
+"Homepage" = "https://github.com/Y-Sky-bro/nexus-memory"
+"Documentation" = "https://github.com/Y-Sky-bro/nexus-memory#readme"
 
 [project.scripts]
 nexus-mcp = "nexus_mcp:main"

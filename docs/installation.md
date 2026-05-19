@@ -4,7 +4,7 @@
 
 ```bash
 # Download nexus_mcp.py
-curl -O https://raw.githubusercontent.com/nexus-memory/nexus/main/nexus_mcp.py
+curl -O https://raw.githubusercontent.com/Y-Sky-bro/nexus-memory/main/nexus_mcp.py
 
 # Run it
 python nexus_mcp.py
