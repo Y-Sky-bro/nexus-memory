@@ -1,0 +1,20 @@
+# Nexus Memory System — .gitignore
+
+# Memory data (user-specific, never commit)
+memory/
+.token_economics.json
+.monitor_log.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
